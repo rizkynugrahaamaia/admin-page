@@ -57,41 +57,45 @@ CREATE TABLE Pembelian (
 ```
 Ini akan membuat database toko_db dengan tiga tabel: Produk, Stock produk, dan Pembelian, beserta data produk awal.
 
-## Setup MYSQL
-sesuaikan host, user, password, database dengan yang anda miliki, terdapat pada app.js
+## Konfigurasi
+
+1. **Koneksi Database**
+sesuaikan host, user, password dengan yang anda miliki, terdapat pada app.js
 ```bash
     // Replace with your MySQL 
+    const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: '', 
+    password: 'kata_sandi_anda',  // Ganti dengan kata sandi MySQL Anda
     database: 'toko_db'
+});
 ```
+2. **Pastikan MySQL Berjalan**
+Verifikasi bahwa server MySQL aktif dan database toko_db dapat diakses.
 
-## Installation
+## Instalasi
 
-1. **Clone the repository or download the source code**
+1. **Kloning Repositori**
 
    ```bash
    git clone https://github.com/yourusername/admin-page.git
    cd admin-page
    ```
 
-   Or simply download and extract the ZIP file.
-
-2. **Install dependencies**
+2. **install Dependensi**
 
    ```bash
    npm install
    ```
 
-## Running the Application
+## Menjalankan Aplikasi
 
-1. **Start the server**
+1. **Jalankan Server**
 
    ```bash
    node app.js
    ```
 
-2. **Open your browser**
+2. **Buka browser untuk akses halaman**
 
-   Navigate to [http://localhost:3000](http://localhost:3000) to see the admin page in action.
+   Navigate to [http://localhost:3000](http://localhost:3000/purchases) to see the admin page in action.
