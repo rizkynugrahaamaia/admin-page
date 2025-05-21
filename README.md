@@ -1,10 +1,8 @@
-Admin Page untuk Manajemen Pembelian
+# Admin Page untuk Manajemen Pembelian
 Aplikasi ini adalah halaman admin sederhana yang dirancang untuk mengelola pembelian produk dan stok. Admin dapat melihat daftar produk, menambah pembelian baru, membatalkan pembelian, serta melacak jumlah stok. Aplikasi ini dibangun menggunakan Node.js, Express.js, MySQL, dan EJS untuk templating.
 
+## Prasyarat
 
-
-
-Prasyarat
 Sebelum memulai, pastikan Anda telah menginstal:
 
 Node.js (versi 14 atau lebih tinggi)
@@ -12,12 +10,12 @@ MySQL (versi 5.7 atau lebih tinggi)
 Editor kode (contoh: VS Code)
 Git (opsional, untuk mengkloning repositori)
 
-
-Setup Database
+## Setup Database
 
 Jalankan MySQL: Pastikan server MySQL Anda aktif.
 Buat Database: Buka klien MySQL (misalnya MySQL Workbench atau baris perintah) dan jalankan perintah berikut untuk membuat database dan tabel:
 
+```bash
 CREATE DATABASE toko_db;
 USE toko_db;
 
@@ -56,13 +54,44 @@ CREATE TABLE Pembelian (
     status VARCHAR(20),
     FOREIGN KEY (product_id) REFERENCES Produk(product_id)
 );
+```
+Ini akan membuat database toko_db dengan tiga tabel: Produk, Stock produk, dan Pembelian, beserta data produk awal.
 
-Ini akan membuat database toko_db dengan tiga tabel: Produk, Stock_produk, dan Pembelian, beserta data produk awal.
-
-sesuaikan mysql dengan setup anda yang terdapat pada app.js
-
-     // Replace with your MySQL 
+## Setup MYSQL
+sesuaikan host, user, password, database dengan yang anda miliki, terdapat pada app.js
+```bash
+    // Replace with your MySQL 
     host: 'localhost',
     user: 'root',
     password: '', 
     database: 'toko_db'
+```
+
+## Installation
+
+1. **Clone the repository or download the source code**
+
+   ```bash
+   git clone https://github.com/yourusername/admin-page.git
+   cd admin-page
+   ```
+
+   Or simply download and extract the ZIP file.
+
+2. **Install dependencies**
+
+   ```bash
+   npm install
+   ```
+
+## Running the Application
+
+1. **Start the server**
+
+   ```bash
+   node app.js
+   ```
+
+2. **Open your browser**
+
+   Navigate to [http://localhost:3000](http://localhost:3000) to see the admin page in action.
