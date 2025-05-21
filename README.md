@@ -98,4 +98,4 @@ Verifikasi bahwa server MySQL aktif dan database toko_db dapat diakses.
 
 2. **Buka browser untuk akses halaman**
 
-   Navigate to [http://localhost:3000](http://localhost:3000/purchases) to see the admin page in action.
+   Navigate to [http://localhost:3000/purchases](http://localhost:3000/purchases) to see the admin page in action.
